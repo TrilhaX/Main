@@ -3591,6 +3591,9 @@ local MiscTab = Window:MakeTab({
 
 
 
+for i,v in pairs(getconnections(game.Players.LocalPlayer.Idled)) do
+    v:Disable()
+end
 end
 
 
@@ -3897,7 +3900,11 @@ function autoSummon()
           end    
     })
 
+    for i,v in pairs(getconnections(game.Players.LocalPlayer.Idled)) do
+        v:Disable()
     end
+    end
+
 
     if game.PlaceId == 14229839966 then
         local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
@@ -4110,4 +4117,10 @@ function autoSummon()
             end    
         })    
 
-    end
+
+
+        for i,v in pairs(getconnections(game.Players.LocalPlayer.Idled)) do
+            v:Disable()
+        end
+        end
+    OrionLib:Init()
