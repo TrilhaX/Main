@@ -4132,4 +4132,39 @@ function autoSummon()
         v:Disable()
     end
     end
+
+
+
+    
+    if game.PlaceId == 13775256536 then
+        local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+        local Window = OrionLib:MakeWindow({Name = "Trilha Hub | [💥EP 56] Toilet Tower Defense", HidePremium = false, IntroText = "Trilha Hub", SaveConfig = true, ConfigFolder = "Trilha Hub"})
+    
+    
+    
+    
+    function autojoinTHQ()
+    while getgenv().autojoinTHQ == true do
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(56.4250031, 10.6875057, 12.7000046, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+        wait(1) 
+        end
+    end
+    
+    local Tab = Window:MakeTab({
+        Name = "Auto Join Toilet Hq",
+        Icon = "rbxassetid://4483345998",
+        PremiumOnly = false
+    })
+    
+    
+    
+    Tab:AddToggle({
+        Name = "Auto Join Toilet hq",
+        Default = false,
+        Callback = function(Value)
+            getgenv().autojoinTHQ = Value
+            autojoinTHQ()	
+        end    
+    })
+    end
     OrionLib:Init()
