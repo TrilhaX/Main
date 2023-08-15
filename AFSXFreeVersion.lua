@@ -1360,68 +1360,20 @@ function MakeScriptHub()
         
                     game:GetService("ReplicatedStorage").Events["Quests/RemoteEvent"]:FireServer(ohString1, ohString2, ohNumber3)
                     wait(0.1)
-                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1438.36987, 66.1035461, 1988.25781, -0.77754879, 0, -0.628822744, 0, 1, 0, 0.628822744, 0, -0.77754879) 
+                     
                     wait(0.1)
                     local ohString1 = "Equip"
                     local ohString2 = "Sword"
                     local ohBoolean3 = true
         
                     game:GetService("ReplicatedStorage").Events["Stats/RemoteFunction"]:InvokeServer(ohString1, ohString2, ohBoolean3)
-                    local ohString1 = "TrainStat"
-                    local ohString2 = "Sword"
-        
-                    game:GetService("ReplicatedStorage").Events["Stats/RemoteFunction"]:InvokeServer(ohString1, ohString2)
+                   
                     wait(0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001)
-                    local ohString1 = "TrainStat"
+                    local ohString1 = "Equip"
                     local ohString2 = "Sword"
+                    local ohBoolean3 = false
         
-                    game:GetService("ReplicatedStorage").Events["Stats/RemoteFunction"]:InvokeServer(ohString1, ohString2)
-                    wait(0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001)
-                    local ohString1 = "TrainStat"
-                    local ohString2 = "Sword"
-        
-                    game:GetService("ReplicatedStorage").Events["Stats/RemoteFunction"]:InvokeServer(ohString1, ohString2)
-                    wait(0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001)
-                    local ohString1 = "TrainStat"
-                    local ohString2 = "Sword"
-        
-                    game:GetService("ReplicatedStorage").Events["Stats/RemoteFunction"]:InvokeServer(ohString1, ohString2)
-                    wait(0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001)
-                    local ohString1 = "TrainStat"
-                    local ohString2 = "Sword"
-        
-                    game:GetService("ReplicatedStorage").Events["Stats/RemoteFunction"]:InvokeServer(ohString1, ohString2)
-                    wait(0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001)
-                    local ohString1 = "TrainStat"
-                    local ohString2 = "Sword"
-        
-                    game:GetService("ReplicatedStorage").Events["Stats/RemoteFunction"]:InvokeServer(ohString1, ohString2)
-                    wait(0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001)
-                    local ohString1 = "TrainStat"
-                    local ohString2 = "Sword"
-        
-                    game:GetService("ReplicatedStorage").Events["Stats/RemoteFunction"]:InvokeServer(ohString1, ohString2)
-                    wait(0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001)
-                    local ohString1 = "TrainStat"
-                    local ohString2 = "Sword"
-        
-                    game:GetService("ReplicatedStorage").Events["Stats/RemoteFunction"]:InvokeServer(ohString1, ohString2)
-                    wait(0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001)
-                    local ohString1 = "TrainStat"
-                    local ohString2 = "Sword"
-        
-                    game:GetService("ReplicatedStorage").Events["Stats/RemoteFunction"]:InvokeServer(ohString1, ohString2)
-                    wait(0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001)
-                    local ohString1 = "TrainStat"
-                    local ohString2 = "Sword"
-        
-                    game:GetService("ReplicatedStorage").Events["Stats/RemoteFunction"]:InvokeServer(ohString1, ohString2)
-                    wait(0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001)
-                    local ohString1 = "TrainStat"
-                    local ohString2 = "Sword"
-        
-                    game:GetService("ReplicatedStorage").Events["Stats/RemoteFunction"]:InvokeServer(ohString1, ohString2)
-                    wait(0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001)
+                    game:GetService("ReplicatedStorage").Events["Stats/RemoteFunction"]:InvokeServer(ohString1, ohString2, ohBoolean3)
                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1115.87427, 67.8538895, 1354.78479, -0.937087655, 8.26632629e-08, 0.349094182, 8.72217782e-08, 1, -2.66064437e-09, -0.349094182, 2.79553571e-08, -0.937087655) 
                     keypress("0x45")
                     keyrelease("0x45")
@@ -1825,7 +1777,7 @@ function MakeScriptHub()
                 game:GetService("TeleportService"):Teleport(11545598432, LocalPlayer)
             end
         end
-        
+    
         local Tab = Window:CreateTab('Main', true, 'rbxassetid://3926305904', Vector2.new(484, 44), Vector2.new(36, 36))
         
         local Section = Tab:CreateSection('Auto Train')
@@ -1882,50 +1834,88 @@ function MakeScriptHub()
             autoUpSpeed()
         end)
         
-        
         local Tab = Window:CreateTab('Boss+Skill', false, 'rbxassetid://3926305904', Vector2.new(484, 44), Vector2.new(36, 36))
+    
+        local Section = Tab:CreateSection('Boss')
         
-        local Section = Tab:CreateSection('Auto Boss')
+        local function CreateBossToggle(BOSS_NAME, position)
+            local isMovingToBoss = false
+            local bossSpawned = false
+            local bossConnection = nil
         
-        local Toggle = Section:CreateToggle('Auto Monkey', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
-            getgenv().autoMon = Value 
-            autoMon()
-        end)
+            local function MoveToBoss(Mob)
+                repeat
+                    wait()
+                    if isMovingToBoss then
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(position)
+                        game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(Mob.HumanoidRootPart.CFrame)
+                    end
+                until not (isMovingToBoss and Mob and Mob.Parent and Mob:FindFirstChild("Humanoid"))
+            end
+            
+            local function HandleBossSpawned(Boss)
+                if not bossSpawned then
+                    bossSpawned = true
+                    isMovingToBoss = true
+                    coroutine.wrap(function()
+                        MoveToBoss(Boss)
+                    end)()
+                end
+            end
         
-        local Toggle = Section:CreateToggle('Auto Overhaul', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
-            getgenv().autoOver = Value 
-            autoOver()
-        end)
+            local function HandleBossRemoved()
+                isMovingToBoss = false
+                bossSpawned = false
+            end
         
-        local Toggle = Section:CreateToggle('Auto Shukaku', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
-            getgenv().autoShukaku = Value 
-            autoShukaku()
-        end)
+            local function ToggleValueChanged(Value)
+                if Value then
+                    local Boss = game.Workspace.Scriptable.Bosses:FindFirstChild(BOSS_NAME)
+                    if Boss then
+                        isMovingToBoss = true
+                        coroutine.wrap(function()
+                            MoveToBoss(Boss)
+                        end)()
+                        bossConnection = Boss.ChildRemoved:Connect(HandleBossRemoved)
+                    end
+                else
+                    isMovingToBoss = false
+                    if bossConnection then
+                        bossConnection:Disconnect()
+                    end
+                end
+            end
         
-        local Toggle = Section:CreateToggle('Auto Titan', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
-            getgenv().autoTitan = Value 
-            autoTitan()
-        end)
+            local Toggle = Section:CreateToggle('Auto ' .. BOSS_NAME, false, Color3.fromRGB(0, 125, 255), 0.25, ToggleValueChanged)
         
-        local Toggle = Section:CreateToggle('Auto Arlong', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
-            getgenv().autoArlong = Value 
-            autoArlong()
-        end)
+            spawn(function()
+                while true do
+                    wait(1)  -- Adjust the interval as needed
+                    local Boss = game.Workspace.Scriptable.Bosses:FindFirstChild(BOSS_NAME)
+                    if Boss then
+                        HandleBossSpawned(Boss)
+                    else
+                        bossSpawned = false
+                    end
+                    wait(1)  -- Add a delay before checking again
+                end
+            end)
+        end
         
-        local Toggle = Section:CreateToggle('Auto Hand Demon', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
-            getgenv().autoHand = Value 
-            autoHand()
-        end)
+        local bossPositions = {
+            _friezy = Vector3.new(1173.84851, 167.718689, 1795.86377),
+            _ape = Vector3.new(-1529.29602, 39.1222382, -171),
+            _desertBoss = Vector3.new(1549.32654, 24.2589684, -600.291321),
+            _arlongo = Vector3.new(2019.05786, 186.293869, -2704.44312),
+            _overhaul = Vector3.new(-487.526001, -612.916504, 775.115234),
+            _armoredTitan = Vector3.new(1971.35803, 218.063828, -2755.94312),
+            _handDemon = Vector3.new(-704.1297, 184.137543, -2253.7915),
+            -- Add other boss positions here
+        }
         
-        local Toggle = Section:CreateToggle('Auto Freeza', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
-            getgenv().autoFreeza = Value 
-            autoFreeza()
-        end)
-        
-        local Toggle = Section:CreateToggle('Auto Pain', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
-            getgenv().autoPain = Value 
-            autoPain()
-        end)
+        for BOSS_NAME, position in pairs(bossPositions) do
+            CreateBossToggle(BOSS_NAME, position)
+        end
         
         local Section = Tab:CreateSection('Auto Use Skill (Punch Skills)')
         
@@ -3063,7 +3053,6 @@ function MakeScriptHub()
                 v:Disable()
             end
             end
-end
 
 local UIName = "Tempest Hub"
 local CoreGui = game:GetService("CoreGui")
