@@ -1,16 +1,16 @@
 local Library = loadstring(game:HttpGet('https://raw.githubusercontent.com/VisualRoblox/Roblox/main/UI-Libraries/Visual%20UI%20Library/Source.lua'))()
-local Window = Library:CreateWindow('Tempest Hub', '[ 🏆UPDATE 2] Anime Fighting Simulator X', 'Tempest Hub', 'rbxassetid://12715314849', 'VisualUIConfigs', 'Default')
+local Window = Library:CreateWindow('Tempest Hub', 'Key System', 'Tempest Hub', 'rbxassetid://12715314849', 'VisualUIConfigs', 'Default')
 
-local Tab = Window:CreateTab('Tab', true, 'rbxassetid://3926305904', Vector2.new(484, 44), Vector2.new(36, 36))
+local Tab = Window:CreateTab('Key', true, 'rbxassetid://3926305904', Vector2.new(484, 44), Vector2.new(36, 36))
 
-local Section = Tab:CreateSection('Section')
+local Section = Tab:CreateSection('Key')
 
-local Textbox = Section:CreateTextbox('Textbox', 'Input', function(Value)
+local Textbox = Section:CreateTextbox('Put Key', 'Input', function(Value)
     _G.key = Value
     CheckKey()
 end)
 
-local Button = Section:CreateButton('Button', function()
+local Button = Section:CreateButton('Get Key Link', function()
     print('Button Pressed')
 
     -- URL of the link you want to copy
@@ -20,6 +20,7 @@ local Button = Section:CreateButton('Button', function()
     setclipboard(linkToCopy)
 
     print('Link copied to clipboard:', linkToCopy)
+    Library:CreateNotification('Key Link', 'Key Link Copied, Paste In Ur browser', 5)
 end)
 
 function CheckKey()
