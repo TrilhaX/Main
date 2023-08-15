@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet('https://raw.githubusercontent.com/VisualRoblox/Roblox/main/UI-Libraries/Visual%20UI%20Library/Source.lua'))()
-local Window = Library:CreateWindow('Tempest Hub', 'Key System', 'Tempest Hub', 'VisualUIConfigs', 'Default')
+local Window = Library:CreateWindow('Tempest Hub', 'Key System', 'Tempest Hub', 'rbxassetid://12715314849', 'VisualUIConfigs', 'Default')
 
 local Tab = Window:CreateTab('Key', true, 'rbxassetid://3926305904', Vector2.new(484, 44), Vector2.new(36, 36))
 
