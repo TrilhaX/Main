@@ -28,7 +28,6 @@ function CheckKey()
 
     local keys = {
         "ry4nJT3zLa9WeN65E9rwfvUmFcG7YkqT",
-        "hpXHLSsu"
     }
 
     local keyCheck = false
