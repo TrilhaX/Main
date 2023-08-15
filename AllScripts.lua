@@ -3983,4 +3983,13 @@ local Tab = Window:CreateTab('Main', true, 'rbxassetid://3926305904', Vector2.ne
             v:Disable()
         end
         end
-        OrionLib:Init()
+
+
+if game.PlaceId == 4483381587 then
+	local Library = loadstring(game:HttpGet('https://raw.githubusercontent.com/VisualRoblox/Roblox/main/UI-Libraries/Visual%20UI%20Library/Source.lua'))()
+	local Window = Library:CreateWindow('Tempest Hub', '[ 🏆UPDATE 2] Anime Fighting Simulator X', 'Tempest Hub', 'rbxassetid://12715314849', 'VisualUIConfigs', 'Default')
+
+	for i,v in pairs(getconnections(game.Players.LocalPlayer.Idled)) do
+		v:Disable()
+	end
+	end
