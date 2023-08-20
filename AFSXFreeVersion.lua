@@ -50,10 +50,8 @@ wait()
     function autoSummon()
         while getgenv().autoSummon == true do
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(111.258568, 63.2120171, -250.672852, 0.299545586, -1.08275145e-07, -0.954082012, -2.20305623e-08, 1, -1.20402973e-07, 0.954082012, 5.70851384e-08, 0.299545586)
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(111.258568, 63.2120171, -250.672852, 0.299545586, -1.08275145e-07, -0.954082012, -2.20305623e-08, 1, -1.20402973e-07, 0.954082012, 5.70851384e-08, 0.299545586)
         keypress("0x52")
-        keyrelease("0x52")  
-wait()
+        keyrelease("0x52")
         keypress("0x45")
         keyrelease("0x45")
         wait(0.1)
@@ -599,183 +597,6 @@ wait()
     function TeleporteE()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-195.236145, 14.7526369, -9.80304146, 1, 0, 0, 0, 1, 0, 0, 0, 1)
 wait()
-    end
-    
-    function autoMon()
-        while getgenv().autoMon == true do
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1558.55933, 24.4332237, -170.542786, -0.833271444, -1.34692639e-08, 0.552864134, -3.0353366e-08, 1, -2.13855973e-08, -0.552864134, -3.46012925e-08, -0.833271444)  
-wait()
-        local ohString1 = "Equip"
-        local ohString2 = "Sword"
-        local ohBoolean3 = true
-    
-        game:GetService("ReplicatedStorage").Events["Stats/RemoteFunction"]:InvokeServer(ohString1, ohString2, ohBoolean3)
-    wait()
-        local ohString1 = "TrainStat"
-        local ohString2 = "Sword"
-    
-        game:GetService("ReplicatedStorage").Events["Stats/RemoteFunction"]:InvokeServer(ohString1, ohString2)
-    wait()
-    end
-    end
-    
-    
-    function autoOver()
-    while getgenv().autoOver == true do
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-276.370972, -631.597534, 877.319397, 0.473914742, 1.73955197e-08, 0.88057071, 9.80860264e-08, 1, -7.25437843e-08, -0.88057071, 1.20751253e-07, 0.473914742)
-wait()
-    local ohString1 = "Equip"
-    local ohString2 = "Sword"
-    local ohBoolean3 = true
-    
-    game:GetService("ReplicatedStorage").Events["Stats/RemoteFunction"]:InvokeServer(ohString1, ohString2, ohBoolean3)
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-276.370972, -631.597534, 877.319397, 0.473914742, 1.73955197e-08, 0.88057071, 9.80860264e-08, 1, -7.25437843e-08, -0.88057071, 1.20751253e-07, 0.473914742)
-wait()
-    local ohString1 = "TrainStat"
-    local ohString2 = "Sword"
-    
-    game:GetService("ReplicatedStorage").Events["Stats/RemoteFunction"]:InvokeServer(ohString1, ohString2)
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-276.370972, -631.597534, 877.319397, 0.473914742, 1.73955197e-08, 0.88057071, 9.80860264e-08, 1, -7.25437843e-08, -0.88057071, 1.20751253e-07, 0.473914742)
-wait()
-    end
-    end
-    
-    
-    function autoShukaku()
-    while getgenv().autoShukaku == true do
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1549.44104, 14.0959501, -587.82074, 0.932023108, -8.32961007e-08, -0.362398803, 1.01528357e-07, 1, 3.12657633e-08, 0.362398803, -6.59341737e-08, 0.932023108)
-wait()
-    local ohString1 = "Equip"
-    local ohString2 = "Sword"
-    local ohBoolean3 = true
-    
-    game:GetService("ReplicatedStorage").Events["Stats/RemoteFunction"]:InvokeServer(ohString1, ohString2, ohBoolean3)
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1549.44104, 14.0959501, -587.82074, 0.932023108, -8.32961007e-08, -0.362398803, 1.01528357e-07, 1, 3.12657633e-08, 0.362398803, -6.59341737e-08, 0.932023108)
-wait()
-    local ohString1 = "TrainStat"
-    local ohString2 = "Sword"
-    
-    game:GetService("ReplicatedStorage").Events["Stats/RemoteFunction"]:InvokeServer(ohString1, ohString2)
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1549.44104, 14.0959501, -587.82074, 0.932023108, -8.32961007e-08, -0.362398803, 1.01528357e-07, 1, 3.12657633e-08, 0.362398803, -6.59341737e-08, 0.932023108)
-wait()
-    end
-    end
-    
-    
-    function autoTitan()
-    while getgenv().autoTitan == true do
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1964.5343, 175.598969, -2759.64551, -0.984346747, 6.97201941e-08, 0.176242813, 7.95054618e-08, 1, 4.8460123e-08, -0.176242813, 6.17138269e-08, -0.984346747)
-    local ohString1 = "Equip"
-    local ohString2 = "Sword"
-    local ohBoolean3 = true
-    
-    game:GetService("ReplicatedStorage").Events["Stats/RemoteFunction"]:InvokeServer(ohString1, ohString2, ohBoolean3)
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1964.5343, 175.598969, -2759.64551, -0.984346747, 6.97201941e-08, 0.176242813, 7.95054618e-08, 1, 4.8460123e-08, -0.176242813, 6.17138269e-08, -0.984346747)
-wait()
-    local ohString1 = "TrainStat"
-    local ohString2 = "Sword"
-    
-    game:GetService("ReplicatedStorage").Events["Stats/RemoteFunction"]:InvokeServer(ohString1, ohString2)
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1964.5343, 175.598969, -2759.64551, -0.984346747, 6.97201941e-08, 0.176242813, 7.95054618e-08, 1, 4.8460123e-08, -0.176242813, 6.17138269e-08, -0.984346747)
-wait()
-    
-    end
-    end
-    
-    
-    function autoArlong()
-    while getgenv().autoArlong == true do
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1964.5343, 175.598969, -2759.64551, -0.984346747, 6.97201941e-08, 0.176242813, 7.95054618e-08, 1, 4.8460123e-08, -0.176242813, 6.17138269e-08, -0.984346747)
-    local ohString1 = "Equip"
-    local ohString2 = "Sword"
-    local ohBoolean3 = true
-    
-    game:GetService("ReplicatedStorage").Events["Stats/RemoteFunction"]:InvokeServer(ohString1, ohString2, ohBoolean3)
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1964.5343, 175.598969, -2759.64551, -0.984346747, 6.97201941e-08, 0.176242813, 7.95054618e-08, 1, 4.8460123e-08, -0.176242813, 6.17138269e-08, -0.984346747)
-wait()
-    local ohString1 = "TrainStat"
-    local ohString2 = "Sword"
-    
-    game:GetService("ReplicatedStorage").Events["Stats/RemoteFunction"]:InvokeServer(ohString1, ohString2)
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1964.5343, 175.598969, -2759.64551, -0.984346747, 6.97201941e-08, 0.176242813, 7.95054618e-08, 1, 4.8460123e-08, -0.176242813, 6.17138269e-08, -0.984346747)
-wait()
-    end
-    end
-    
-    
-    function autoHand()
-    while getgenv().autoHand == true do
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-704.1297, 195.137543, -2253.7915, 0.90629667, 0, 0.422642082, 0, 1, 0, -0.422642082, 0, 0.90629667) 
-    local ohString1 = "Equip"
-    local ohString2 = "Sword"
-    local ohBoolean3 = true
-    
-    game:GetService("ReplicatedStorage").Events["Stats/RemoteFunction"]:InvokeServer(ohString1, ohString2, ohBoolean3)
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-704.1297, 195.137543, -2253.7915, 0.90629667, 0, 0.422642082, 0, 1, 0, -0.422642082, 0, 0.90629667) 
-wait()
-    local ohString1 = "TrainStat"
-    local ohString2 = "Sword"
-    
-    game:GetService("ReplicatedStorage").Events["Stats/RemoteFunction"]:InvokeServer(ohString1, ohString2)
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-704.1297, 195.137543, -2253.7915, 0.90629667, 0, 0.422642082, 0, 1, 0, -0.422642082, 0, 0.90629667) 
-wait()
-    end
-    end
-    
-    
-    function autoFreeza()
-    while getgenv().autoFreeza == true do
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1176.94214, 32.4626999, 1806.72327, 3.47877119e-07, 0.992150664, -0.125048324, 0.0082475245, 0.125044078, 0.992116928, 0.999965966, -0.00103168434, -0.00818274356) 
-    local ohString1 = "Equip"
-    local ohString2 = "Sword"
-    local ohBoolean3 = true
-    
-    game:GetService("ReplicatedStorage").Events["Stats/RemoteFunction"]:InvokeServer(ohString1, ohString2, ohBoolean3)
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1176.94214, 32.4626999, 1806.72327, 3.47877119e-07, 0.992150664, -0.125048324, 0.0082475245, 0.125044078, 0.992116928, 0.999965966, -0.00103168434, -0.00818274356) 
-wait()
-    local ohString1 = "TrainStat"
-    local ohString2 = "Sword"
-    
-    game:GetService("ReplicatedStorage").Events["Stats/RemoteFunction"]:InvokeServer(ohString1, ohString2)
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1176.94214, 32.4626999, 1806.72327, 3.47877119e-07, 0.992150664, -0.125048324, 0.0082475245, 0.125044078, 0.992116928, 0.999965966, -0.00103168434, -0.00818274356) 
-wait()
-    end
-    end
-    
-    function autoPain()
-    while getgenv().autoPain == true do
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2060.0835, 1222.37878, -1480.53186, 0.707134247, -1.46074832e-08, 0.707079291, 6.50979759e-09, 1, 1.41485996e-08, -0.707079291, -5.40201661e-09, 0.707134247)   
-    
-    local ohString1 = "Equip"
-    local ohString2 = "Sword"
-    local ohBoolean3 = true
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2060.0835, 1220.37878, -1480.53186, 0.707134247, -1.46074832e-08, 0.707079291, 6.50979759e-09, 1, 1.41485996e-08, -0.707079291, -5.40201661e-09, 0.707134247)  
-    
-    game:GetService("ReplicatedStorage").Events["Stats/RemoteFunction"]:InvokeServer(ohString1, ohString2, ohBoolean3)
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2060.0835, 1222.37878, -1480.53186, 0.707134247, -1.46074832e-08, 0.707079291, 6.50979759e-09, 1, 1.41485996e-08, -0.707079291, -5.40201661e-09, 0.707134247)  
-    local ohString1 = "TrainStat"
-    local ohString2 = "Sword"
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2060.0835, 1220.37878, -1480.53186, 0.707134247, -1.46074832e-08, 0.707079291, 6.50979759e-09, 1, 1.41485996e-08, -0.707079291, -5.40201661e-09, 0.707134247)   
-    game:GetService("ReplicatedStorage").Events["Stats/RemoteFunction"]:InvokeServer(ohString1, ohString2)
-    
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2060.0835, 1222.37878, -1480.53186, 0.707134247, -1.46074832e-08, 0.707079291, 6.50979759e-09, 1, 1.41485996e-08, -0.707079291, -5.40201661e-09, 0.707134247)  
-    local ohString1 = "TrainStat"
-    local ohString2 = "Sword"
-    game:GetService("ReplicatedStorage").Events["Stats/RemoteFunction"]:InvokeServer(ohString1, ohString2)
-    
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2060.0835, 1220.37878, -1480.53186, 0.707134247, -1.46074832e-08, 0.707079291, 6.50979759e-09, 1, 1.41485996e-08, -0.707079291, -5.40201661e-09, 0.707134247)  
-    local ohString1 = "TrainStat"
-    local ohString2 = "Sword"
-    game:GetService("ReplicatedStorage").Events["Stats/RemoteFunction"]:InvokeServer(ohString1, ohString2)
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2060.0835, 1222.37878, -1480.53186, 0.707134247, -1.46074832e-08, 0.707079291, 6.50979759e-09, 1, 1.41485996e-08, -0.707079291, -5.40201661e-09, 0.707134247)   
-    local ohString1 = "TrainStat"
-    local ohString2 = "Sword"
-    game:GetService("ReplicatedStorage").Events["Stats/RemoteFunction"]:InvokeServer(ohString1, ohString2)
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2060.0835, 1220.37878, -1480.53186, 0.707134247, -1.46074832e-08, 0.707079291, 6.50979759e-09, 1, 1.41485996e-08, -0.707079291, -5.40201661e-09, 0.707134247)   
-    local ohString1 = "TrainStat"
-    local ohString2 = "Sword"
-    game:GetService("ReplicatedStorage").Events["Stats/RemoteFunction"]:InvokeServer(ohString1, ohString2)
-        end
     end
     
     
@@ -1842,10 +1663,9 @@ end
     
     local Tab = Window:CreateTab('Boss+Skill', false, 'rbxassetid://3926305904', Vector2.new(484, 44), Vector2.new(36, 36))
 
-    local Section = Tab:CreateSection('Boss')
-    
+    local Section = Tab:CreateSection('Auto Boss Spawn')
 
-        
+
     local function CreateBossToggle(BOSS_NAME, position)
         local isMovingToBoss = false
         local bossSpawned = false
@@ -1882,7 +1702,7 @@ end
         end
     
         local function ToggleValueChanged(Value)
-            if Value then
+            while Value do
                 local Boss = game.Workspace.Scriptable.Bosses:FindFirstChild(BOSS_NAME)
                 if Boss then
                     isMovingToBoss = true
@@ -1891,12 +1711,12 @@ end
                     end)()
                     bossConnection = Boss.ChildRemoved:Connect(HandleBossRemoved)
                 end
-            else
-                isMovingToBoss = false
-                bossSpawned = false
-                if bossConnection then
-                    bossConnection:Disconnect()
-                end
+                wait()  -- Aguarda antes de verificar novamente
+            end
+            isMovingToBoss = false
+            bossSpawned = false
+            if bossConnection then
+                bossConnection:Disconnect()
             end
         end
     
@@ -1921,17 +1741,52 @@ end
     
         spawn(function()
             while true do
-                wait(1)  -- Adjust the interval as needed
+                wait()  -- Ajuste o intervalo conforme necessário
                 local Boss = game.Workspace.Scriptable.Bosses:FindFirstChild(BOSS_NAME)
                 if Boss then
                     HandleBossSpawned(Boss)
                 else
                     bossSpawned = false
                 end
-                wait(1)  -- Add a delay before checking again
+                wait()  -- Adicione um atraso antes de verificar novamente
             end
         end)
     end
+    
+
+
+    function autodaki()
+            while getgenv().autodaki == true do
+                wait() -- Espera por um curto período de tempo antes de executar a próxima iteração            
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(79.1562881, 44.001976, 2468.60083, 0.997301817, 0, 0.0734104663, 0, 1, 0, -0.0734104663, 0, 0.997301817)
+            
+                local ohString1 = "Equip"
+                local ohString2 = "Sword"
+                local ohBoolean3 = true
+            
+                game:GetService("ReplicatedStorage").Events["Stats/RemoteFunction"]:InvokeServer(ohString1, ohString2, ohBoolean3)
+            
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(79.1562881, 44.001976, 2468.60083, 0.997301817, 0, 0.0734104663, 0, 1, 0, -0.0734104663, 0, 0.997301817)
+            
+                local ohString1 = "TrainStat"
+                local ohString2 = "Sword"
+            
+                game:GetService("ReplicatedStorage").Events["Stats/RemoteFunction"]:InvokeServer(ohString1, ohString2)            
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(79.1562881, 44.001976, 2468.60083, 0.997301817, 0, 0.0734104663, 0, 1, 0, -0.0734104663, 0, 0.997301817)
+                local ohString1 = "Equip"
+                local ohString2 = "Sword"
+                local ohBoolean3 = false
+            
+                game:GetService("ReplicatedStorage").Events["Stats/RemoteFunction"]:InvokeServer(ohString1, ohString2, ohBoolean3)
+        end
+    end
+
+    local Section = Tab:CreateSection('Auto Boss Normal')
+    
+    local Toggle = Section:CreateToggle('Auto Daki', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
+        getgenv().autodaki = Value 
+        autodaki()
+    end)
     
     
     local Section = Tab:CreateSection('Auto Use Skill (Punch Skills)')
@@ -2090,84 +1945,6 @@ end
     local Toggle = Section:CreateToggle('Auto Endeavor Quest', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
         getgenv().TeleportEN = Value 
         TeleportEN()
-    end)
-    
-    local function CreateBossToggle(BOSS_NAME, position)
-        local isMovingToBoss = false
-        local bossSpawned = false
-        local bossConnection = nil
-    
-        local function MoveToBoss(Mob)
-            while isMovingToBoss and Mob and Mob.Parent and Mob:FindFirstChild("Humanoid") do
-                wait()
-                if isMovingToBoss then
-                    local playerCharacter = game.Players.LocalPlayer.Character
-                    if playerCharacter and playerCharacter:FindFirstChild("HumanoidRootPart") then
-                        playerCharacter.HumanoidRootPart.CFrame = CFrame.new(position)
-                        playerCharacter:SetPrimaryPartCFrame(Mob.CFrame)
-                    end
-                end
-            end
-        end
-    
-        local function HandleBossSpawned(Boss)
-            if not bossSpawned and isMovingToBoss then
-                bossSpawned = true
-                coroutine.wrap(function()
-                    MoveToBoss(Boss)
-                end)()
-            end
-        end
-    
-        local function HandleBossRemoved()
-            isMovingToBoss = false
-            bossSpawned = false
-            if bossConnection then
-                bossConnection:Disconnect()
-            end
-        end
-    
-        local function ToggleValueChanged(Value)
-            if Value then
-                local Boss = game:GetService("Workspace").Scriptable.Mobs[BOSS_NAME]
-                if Boss then
-                    isMovingToBoss = true
-                    coroutine.wrap(function()
-                        MoveToBoss(Boss)
-                    end)()
-                    bossConnection = Boss.Parent.ChildRemoved:Connect(HandleBossRemoved)
-                end
-            else
-                isMovingToBoss = false
-                bossSpawned = false
-                if bossConnection then
-                    bossConnection:Disconnect()
-                end
-            end
-        end
-    
-        return ToggleValueChanged
-    end
-    
-    -- This line is incorrect and should be removed. It's assigning a value to the HumanoidRootPart's CFrame, which doesn't make sense here.
-    -- game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1450.72534, 66.1035461, 1971.30762, 0.997358561, 0, 0.0726351365, 0, 1, 0, -0.0726351365, 0, 0.997358561)
-    
-    -- Assuming Section and bossToggle are defined elsewhere
-    local Section = Tab:CreateSection('Auto Stain Quest')
-    
-    local Toggle = Section:CreateToggle('Auto Stain', false, Color3.fromRGB(0, 125, 255), 0.25, CreateBossToggle("stain", CFrame.new(1450.72534, 66.1035461, 1971.30762)))
-    
-    spawn(function()
-        while true do
-            wait(1)  -- Adjust the interval as needed
-            local Boss = game:GetService("Workspace").Scriptable.Mobs.stain
-            if Boss and Boss:FindFirstChild("HumanoidRootPart") then
-                HandleBossSpawned(Boss.HumanoidRootPart)
-            else
-                bossSpawned = false
-            end
-            wait(1)  -- Add a delay before checking again
-        end
     end)
     
     
