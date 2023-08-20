@@ -1542,6 +1542,82 @@ wait()
                                     keyrelease("0x37")
                                     end
                                 end
+
+                                function autoSkillZB()
+                                    while getgenv().autoSkillZB == true do
+                                        wait()
+                                        keypress("0x34")
+                                        keyrelease("0x34")
+                                        keypress("0x39")
+                                        keyrelease("0x39")
+                                        wait(3.50)
+                                        keypress("0x5A")
+                                        keyrelease("0x5A")
+                                        wait(2.30)
+                                        keypress("0x39")
+                                        keyrelease("0x39")
+                                        keypress("0x34")
+                                        keyrelease("0x34")
+                                        end
+                                    end
+                                
+                                    function autoSkillXB()
+                                        while getgenv().autoSkillXB == true do
+                                            wait()
+                                            keypress("0x34")
+                                            keyrelease("0x34")
+                                            keypress("0x39")
+                                            keyrelease("0x39")
+                                            wait(3.50)
+                                            keypress("0x58")
+                                            keyrelease("0x58")
+                                            wait(2.30)
+                                            keypress("0x39")
+                                            keyrelease("0x39")
+                                            keypress("0x34")
+                                            keyrelease("0x34")
+                                            end
+                                        end
+                                
+                                
+                                function autoSkillCB()
+                                    while getgenv().autoSkillCB == true do
+                                        wait()
+                                        keypress("0x34")
+                                        keyrelease("0x34")
+                                        keypress("0x39")
+                                        keyrelease("0x39")
+                                        wait(3.50)
+                                        keypress("0x43")
+                                        keyrelease("0x43")
+                                        wait(2.30)
+                                        keypress("0x39")
+                                        keyrelease("0x39")
+                                        keypress("0x34")
+                                        keyrelease("0x34")
+                                        end
+                                    end
+                                
+                                
+                                    function autoSkillVB()
+                                        while getgenv().autoSkillVB == true do
+                                            wait()
+                                            keypress("0x34")
+                                            keyrelease("0x34")
+                                            wait()
+                                            keypress("0x39")
+                                            keyrelease("0x39")
+                                            wait(3.50)
+                                            keypress("0x56")
+                                            keyrelease("0x56")
+                                            wait(2.30)
+                                            keypress("0x39")
+                                            keyrelease("0x39")
+                                            wait()
+                                            keypress("0x34")
+                                            keyrelease("0x34")
+                                            end
+                                        end
     
     
     function autoSHop()
@@ -1900,6 +1976,29 @@ end
     local Toggle = Section:CreateToggle('Auto Skill V (Use With Fruit)', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
         getgenv().autoSkillVF = Value 
         autoSkillVF()
+    end)
+
+        
+    local Section = Tab:CreateSection('Auto Use Skill (Breathing Skills)')
+    
+    local Toggle = Section:CreateToggle('Auto Skill Z (Use With Breathing)', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
+        getgenv().autoSkillZB = Value 
+        autoSkillZB()
+    end)
+    
+    local Toggle = Section:CreateToggle('Auto Skill X (Use With Breathing)', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
+        getgenv().autoSkillXB = Value 
+        autoSkillXB()
+    end)
+    
+    local Toggle = Section:CreateToggle('Auto Skill C (Use With Breathing)', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
+        getgenv().autoSkillCB = Value 
+        autoSkillCB()
+    end)
+    
+    local Toggle = Section:CreateToggle('Auto Skill V (Use With Breathing)', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
+        getgenv().autoSkillVB = Value 
+        autoSkillVB()
     end)
     
     local Tab = Window:CreateTab('Daily Rewards+Get Achievement', false, 'rbxassetid://3926305904', Vector2.new(484, 44), Vector2.new(36, 36))
