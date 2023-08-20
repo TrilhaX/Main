@@ -1741,51 +1741,45 @@ function autoSummonBreath()
 end
 
 
-function autoS100M
+function autoS100M()
     while getgenv().autoS100M == true do
-        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(722.618469, 104.359314, 2626.40039, -0.00487720966, 0, -0.999988139, 0, 1, 0, 0.999988139, 0, -0.00487720966)
     end
 end
 
-function autoST100T
+function autoST100T()
     while getgenv().autoST100T == true do
-        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(274.173676, 162.495438, 2360.12476, -0.951660633, 0, 0.307151347, 0, 1, 0, -0.307151347, 0, -0.951660633)
     end
 end
 
-function autoST1QD
+function autoST1QD()
     while getgenv().autoST1QD == true do
-        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1262.4613, -260.499207, 2171.62769, 0.894750595, 0, 0.446566194, 0, 1, 0, -0.446566194, 0, 0.894750595)
     end
 end
 
-function autoD100T
+function autoD100T()
     while getgenv().autoD100T == true do
         wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-413.817261, 143.700317, 2850.18726, -0.00487720966, 0, -0.999988139, 0, 1, 0, 0.999988139, 0, -0.00487720966)
     end
 end
 
-function autoD1QD
+function autoD1QD()
     while getgenv().autoD1QD == true do
-        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-199.738586, 312.071686, 3220.68311, -0.00487720966, 0, -0.999988139, 0, 1, 0, 0.999988139, 0, -0.00487720966)
     end
 end
 
-function autoC100T
+function autoC100T()
     while getgenv().autoC100T == true do
-        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-564.525391, 37.6805267, 739.559082, -0.984812617, 0, -0.173621148, 0, 1, 0, 0.173621148, 0, -0.984812617)
     end
 end
 
-function autoC1QD
+function autoC1QD()
     while getgenv().autoC1QD == true do
-        wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(10.9499273, 278.351624, 3581.52515, -0.999983072, 0, -0.00586987333, 0, 1, 0, 0.00586987333, 0, -0.999983072)
     end
 end
@@ -1917,7 +1911,7 @@ end
         _overhaul = Vector3.new(-487.526001, -612.916504, 775.115234),
         _armoredTitan = Vector3.new(1971.35803, 218.063828, -2755.94312),
         _handDemon = Vector3.new(-704.1297, 184.137543, -2253.7915),
-        -- Add other boss positions here
+        _gyutaro = Vector3.new(10.7575665, 18.124176, 2837.58765, 0, 0, 1, 0, 1, -0, -1, 0, 0)
     }
     
     for BOSS_NAME, position in pairs(bossPositions) do
@@ -2226,6 +2220,16 @@ end
         getgenv().autoST1T = Value 
         autoST1T()
     end)
+
+    local Toggle = Section:CreateToggle('Auto Tp Strength(100T)', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
+        getgenv().autoST100T = Value 
+        autoST100T()
+    end)
+
+    local Toggle = Section:CreateToggle('Auto Tp Strength(1QD)', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
+        getgenv().autoST1QD = Value 
+        autoST1QD()
+    end)
     
     local Section = Tab:CreateSection('Tp To Durability')
     
@@ -2272,6 +2276,16 @@ end
     local Toggle = Section:CreateToggle('Auto Tp Durability(1T)', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
         getgenv().autoD1T = Value 
         autoD1T()
+    end)
+
+    local Toggle = Section:CreateToggle('Auto Tp Durability(100T)', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
+        getgenv().autoD100T = Value 
+        autoD100T()
+    end)
+
+    local Toggle = Section:CreateToggle('Auto Tp Durability(1QD)', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
+        getgenv().autoD1QD = Value 
+        autoD1QD()
     end)
     
     local Section = Tab:CreateSection('Tp To Chakra')
@@ -2320,6 +2334,16 @@ end
         getgenv().autoC1T = Value 
         autoC1T()
     end)
+
+    local Toggle = Section:CreateToggle('Auto Tp Chakra(100T)', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
+        getgenv().autoC100T = Value 
+        autoC100T()
+    end)
+
+    local Toggle = Section:CreateToggle('Auto Tp Chakra(1QD)', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
+        getgenv().autoC1QD = Value 
+        autoC1QD()
+    end)
     
     local Section = Tab:CreateSection('Tp To Speed')
     
@@ -2344,10 +2368,11 @@ end
     end)
 
 
-    local Toggle = Section:CreateToggle('Auto Tp Speed(1M)', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
+    local Toggle = Section:CreateToggle('Auto Tp Speed(100M)', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
         getgenv().autoS100M = Value 
         autoS100M()
     end)
+    
 
     
     local Section = Tab:CreateSection('Tp To Npc')
